@@ -1,0 +1,14 @@
+UPLines,distance,weight
+Denver to Salt Lake City,498,124.5
+Denver to Las Vegas,822,205.5
+Salt Lake City to Las Vegas,444,111
+Salt Lake City to Sparks,459,114.75
+Sparks to Lathrop,198,49.5
+Sparks to Oakland,210,52.5
+Oakland to Los Angeles,423,105.75
+Lathrop to Oakland,66,16.5
+Lathrop to Inland Empire,381,95.25
+Lathrop to Las Vegas,486,121.5
+Las Vegas to Inland Empire,201,50.25
+Inland Empire to Tucson,417,104.25
+Tucson to Santa Teressa,282,70.5

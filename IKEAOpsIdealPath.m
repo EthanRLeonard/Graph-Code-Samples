@@ -32,6 +32,17 @@ LINES = [renamevars(BNSFLINES,[1 2], {'lines' , 'relative distance'})...
 id = linspace(1,34,34)'; idlabel = [id, Labels];
 
 
+
+
+
+
+
+
+
+
+
+
+
 %% Reading in the data 
 InterMDists = readmatrix('InterMDists.csv'); %distances between IM 
 % (InterModal) facilities
@@ -40,13 +51,13 @@ WHtoI = readmatrix('WHtoIM.csv');   %distances between warehouses and IM
 %% Nodes for the graph
 s = [InterMDists(:,1) ; sdists(:,1); WHtoI(:,1)]; %start nodes
 s = [s ; 34 ; 34]; %dummy source goes to both warehouses (start coordinate)
-s = [s;wh2stores_stw(:,1)];
+
 t = [InterMDists(:,2) ; sdists(:,2); WHtoI(:,2)]; %end nodes
 t = [t ; 32 ; 33]; %both warehouses receiving from the dummy source (end)
-t = [t;wh2stores_stw(:,2)];
+
 weights = [InterMDists(:,3); sdists(:,3); WHtoI(:,3)]; 
 weights = [weights;0;0]; %zero weight for dummy source 
-weights = [weights;wh2stores_stw(:,3)];
+
 G = digraph(s,t,weights,Labels);  figure() %making the complete graph
 [TR,D,E] = shortestpathtree(G,34,'Method','positive'); %<--port node to all
 % other nodes

@@ -1,0 +1,9 @@
+BNSFLines,distance,weight
+BNSF Lines:,NaN,NaN
+Barstow to Stockton,363,90.75
+Barstow to San Bernardino,78,19.5
+Barstow to Dummy to Phoenix,456,114
+Barstow to Dummy to Albuquerque,669,167.25
+Stockton to Oakland,60,15
+San Bernardino to Los Angeles,48,12
+Albuquerque to Denver,459,114.75
