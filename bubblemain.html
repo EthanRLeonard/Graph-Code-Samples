@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<script src="https://dc021cc431b93d03482398282603be0a.cdn.bubble.io/f1716249058799x122519896889132340/wasm_exec.js"></script>
+<script>
+// Polyfill
+if (!WebAssembly.instantiateStreaming) {
+    WebAssembly.instantiateStreaming = async (resp, importObject) => {
+        const source = await (await resp).arrayBuffer();
+        return await WebAssembly.instantiate(source, importObject);
+    };
+}
+
+const go = new Go();
+WebAssembly.instantiateStreaming(fetch("https://dc021cc431b93d03482398282603be0a.cdn.bubble.io/f1716249034406x170385035161532580/10seconds.wasm"), go.importObject).then(result => {
+    go.run(result.instance);
+});
+</script>
